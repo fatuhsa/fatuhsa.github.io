@@ -1,0 +1,41 @@
+* {
+  font-family: Arial;
+  color: cyan;
+}
+
+body {
+  background-color: black;
+}
+
+
+.menu {
+  margin-top: 30px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.menu p {
+  text-align: center;
+  border: 1px solid cyan;
+  padding: 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu p.clicked {
+  color: white;
+  background-color: cyan;
+}
+
+.opsi,
+.opsi2 {
+  display: none; /* Menyembunyikan opsi secara default */
+}
+
+#header {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: block;
+}
