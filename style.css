@@ -19,3 +19,8 @@ h1{
   color: indigo;
 }
 
+p>img{
+  height: 64px;
+  width: 64px;
+  float: left;
+}
