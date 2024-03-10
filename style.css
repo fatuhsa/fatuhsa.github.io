@@ -1,7 +1,12 @@
 h1{
   font-family: Arial;
 }
+
 *{
   color: cyan;
   background-color: black ;
+}
+
+#atribut{
+  color: gray;
 }
