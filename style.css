@@ -18,3 +18,7 @@ h1{
 #ap{
   color: indigo;
 }
+
+header>li{
+  list-style: none;
+}
