@@ -7,13 +7,15 @@ body {
   background-color: black;
 }
 
-
 .menu {
   margin-top: 30px;
   align-content: center;
   align-items: center;
   justify-content: center;
+  position: relative; 
+  z-index: 0;
 }
+
 .menu p {
   text-align: center;
   border: 1px solid cyan;
@@ -28,9 +30,28 @@ body {
   background-color: cyan;
 }
 
-.opsi,
+.opsi {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  z-index: 1; 
+}
+
 .opsi2 {
-  display: none; /* Menyembunyikan opsi secara default */
+  display: none; 
+  position: absolute; 
+  top: 100%; 
+  left: 0; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  padding: 10px;
+}
+
+.menu p:hover + .opsi,
+.opsi:hover {
+  display: block; 
 }
 
 #header {
@@ -38,4 +59,14 @@ body {
   margin: 0 auto;
   margin-top: 100px;
   display: block;
+}
+
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px; 
+  background-size: cover;
+  margin-right: 5px;
+  vertical-align: middle;
+  border: 1px solid yellow;
 }
