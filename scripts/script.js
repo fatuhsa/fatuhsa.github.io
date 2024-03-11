@@ -64,3 +64,63 @@ if (content2) {
 } else {
   console.error("Elemen dengan id 'content2' tidak ditemukan.");
 }
+
+var content3 = document.getElementById('content3');
+
+if (content3) {
+  var icons3 = [
+    { name: 'Nama Ikon 1', path: 'path/ikon1.webp' },
+    { name: 'Nama Ikon 2', path: 'path/ikon2.webp' },
+    // Tambahkan ikon-ikon baru di sini
+  ];
+
+  var paragraphs3 = content3.querySelectorAll('p');
+  paragraphs3.forEach(function(paragraph, index) {
+    var iconSpan = document.createElement('span');
+    iconSpan.classList.add('icon');
+    iconSpan.style.backgroundImage = 'url(' + icons3[index].path + ')';
+    paragraph.insertBefore(iconSpan, paragraph.firstChild);
+  });
+} else {
+  console.error("Elemen dengan id 'content3' tidak ditemukan.");
+}
+
+var content4 = document.getElementById('content4');
+
+if (content4) {
+  var icons4 = [
+    { name: 'Nama Ikon 1', path: 'path/ikon1.webp' },
+    { name: 'Nama Ikon 2', path: 'path/ikon2.webp' },
+    // Tambahkan ikon-ikon baru di sini
+  ];
+
+  var paragraphs4 = content4.querySelectorAll('p');
+  paragraphs4.forEach(function(paragraph, index) {
+    var iconSpan = document.createElement('span');
+    iconSpan.classList.add('icon');
+    iconSpan.style.backgroundImage = 'url(' + icons4[index].path + ')';
+    paragraph.insertBefore(iconSpan, paragraph.firstChild);
+  });
+} else {
+  console.error("Elemen dengan id 'content4' tidak ditemukan.");
+}
+
+var content5 = document.getElementById('content5');
+
+if (content5) {
+  var icons5 = [
+    { name: 'Nama Ikon 1', path: 'path/ikon1.webp' },
+    { name: 'Nama Ikon 2', path: 'path/ikon2.webp' },
+    // Tambahkan ikon-ikon baru di sini
+  ];
+
+  var paragraphs5 = content5.querySelectorAll('p');
+  paragraphs5.forEach(function(paragraph, index) {
+    var iconSpan = document.createElement('span');
+    iconSpan.classList.add('icon');
+    iconSpan.style.backgroundImage = 'url(' + icons5[index].path + ')';
+    paragraph.insertBefore(iconSpan, paragraph.firstChild);
+  });
+} else {
+  console.error("Elemen dengan id 'content5' tidak ditemukan.");
+}
