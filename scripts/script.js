@@ -49,7 +49,7 @@ var content2 = document.getElementById('content2');
 if (content2) {
   // Array untuk ikon-ikon baru
   var icons2 = [
-    { name: 'Nama Ikon 1', path: '../icon/8bitemblem.webp' },
+    { name: '8-Bit Emblem', path: '../icon/8bitemblem.webp' },
     { name: 'Nama Ikon 2', path: 'path/ikon2.webp' },
     // Tambahkan ikon-ikon baru di sini
   ];
