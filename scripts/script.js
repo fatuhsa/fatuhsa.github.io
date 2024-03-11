@@ -43,3 +43,24 @@ if (content1) {
 } else {
   console.error("Elemen dengan id 'content1' tidak ditemukan.");
 }
+
+var content2 = document.getElementById('content2');
+
+if (content2) {
+  // Array untuk ikon-ikon baru
+  var icons2 = [
+    { name: 'Nama Ikon 1', path: 'path/ikon1.webp' },
+    { name: 'Nama Ikon 2', path: 'path/ikon2.webp' },
+    // Tambahkan ikon-ikon baru di sini
+  ];
+
+  var paragraphs2 = content2.querySelectorAll('p');
+  paragraphs2.forEach(function(paragraph, index) {
+    var iconSpan = document.createElement('span');
+    iconSpan.classList.add('icon');
+    iconSpan.style.backgroundImage = 'url(' + icons2[index].path + ')';
+    paragraph.insertBefore(iconSpan, paragraph.firstChild);
+  });
+} else {
+  console.error("Elemen dengan id 'content2' tidak ditemukan.");
+}
