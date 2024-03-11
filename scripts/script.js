@@ -50,7 +50,7 @@ if (content2) {
   // Array untuk ikon-ikon baru
   var icons2 = [
     { name: '8-Bit Emblem', path: '../icon/8bitemblem.webp' },
-    { name: 'Nama Ikon 2', path: 'path/ikon2.webp' },
+    { name: 'Adaptive Helm', path: '../icon/adaptive-hel..webp' },
     // Tambahkan ikon-ikon baru di sini
   ];
 
