@@ -18,8 +18,8 @@ function toggleContent(menuNumber) {
   }
 }
 
-// Fungsi untuk menambahkan ikon ke konten
-function tambahkanIkonKeContent(contentId, icons) {
+// Fungsi untuk menambahkan ikon dan data-attribut ke konten
+function tambahkanIkonDataKeContent(contentId, icons) {
   var content = document.getElementById(contentId);
   if (content) {
     var paragraphs = content.querySelectorAll('p');
@@ -28,6 +28,20 @@ function tambahkanIkonKeContent(contentId, icons) {
       iconSpan.classList.add('icon');
       iconSpan.style.backgroundImage = 'url(' + icons[index].path + ')';
       paragraph.insertBefore(iconSpan, paragraph.firstChild);
+
+      // Tambahkan data-attribut
+      var attribSpan = document.createElement('span');
+      attribSpan.classList.add('attrib');
+      attribSpan.textContent = icons[index].attrib;
+      paragraph.appendChild(attribSpan);
+
+      // Tambahkan data-resep jika ada
+      if (icons[index].resep) {
+        var resepSpan = document.createElement('span');
+        resepSpan.classList.add('resep');
+        resepSpan.textContent = "Resep: " + icons[index].resep;
+        paragraph.appendChild(resepSpan);
+      }
     });
   } else {
     console.error("Elemen dengan id '" + contentId + "' tidak ditemukan.");
@@ -36,27 +50,27 @@ function tambahkanIkonKeContent(contentId, icons) {
 
 // Array ikon untuk content1
 var icons1 = [
-  { name: 'B.F. Sword',            path: '../icon/bf-sword.webp' },
-  { name: 'Chain Vest',            path: '../icon/chain-vest.webp' },
-  { name: 'Giant\'s Belt',         path: '../icon/giants-belt.webp' },
-  { name: 'Needlessly Large Rod',  path: '../icon/needlessly-large-rod.webp' },
-  { name: 'Negatron Cloak',        path: '../icon/negatron-cloak.webp' },
-  { name: 'Recurve Bow',           path: '../icon/recurve-bow.webp' },
-  { name: 'Sparring Gloves',       path: '../icon/sparring-gloves.webp' },
-  { name: 'Spatula',               path: '../icon/spatula.png' },
-  { name: 'Tear of the Goddess',   path: '../icon/tear-of-the-goddess.png' }
+  { name: 'B.F. Sword',            path: '../icon/bf-sword.webp', attrib: '+10 Attack Damage' },
+  { name: 'Chain Vest',            path: '../icon/chain-vest.webp', attrib: '+20 Armor' },
+  { name: 'Giant\'s Belt',         path: '../icon/giants-belt.webp', attrib: '+200 Health' },
+  { name: 'Needlessly Large Rod',  path: '../icon/needlessly-large-rod.webp', attrib: '+20 Ability Power' },
+  { name: 'Negatron Cloak',        path: '../icon/negatron-cloak.webp', attrib: '+20 Magic Resist' },
+  { name: 'Recurve Bow',           path: '../icon/recurve-bow.webp', attrib: '+15% Attack Speed' },
+  { name: 'Sparring Gloves',       path: '../icon/sparring-gloves.webp', attrib: 'Random Champion' },
+  { name: 'Spatula',               path: '../icon/spatula.png', attrib: 'Unique Utility Item' },
+  { name: 'Tear of the Goddess',   path: '../icon/tear-of-the-goddess.png', attrib: '+15 Mana' }
   // Tambahkan nama dan path ikon lainnya di sini
 ];
 
-// Memanggil fungsi untuk menambahkan ikon ke content1
-tambahkanIkonKeContent('content1', icons1);
+// Memanggil fungsi untuk menambahkan ikon dan data-attribut ke content1
+tambahkanIkonDataKeContent('content1', icons1);
 
 // Array ikon untuk content2
-// Fungsi untuk menambahkan ikon ke content2
 var icons2 = [
-  { name: '8-Bit Emblem', path: '../icon/8bitemblem.webp' },
-  { name: 'Adaptive Helm', path: '../icon/adaptive-helm.png' },
+  { name: '8-Bit Emblem', path: '../icon/8bitemblem.webp', attrib: '+10 Attack Damage', resep: 'B.F. Sword + Chain Vest' },
+  { name: 'Adaptive Helm', path: '../icon/adaptive-helm.png', attrib: '+10 Attack Damage', resep: 'B.F. Sword + Negatron Cloak' },
   // Tambahkan ikon-ikon baru di sini
 ];
 
-tambahkanIkonKeContent('content2', icons2);
+// Memanggil fungsi untuk menambahkan ikon dan data-attribut ke content2
+tambahkanIkonDataKeContent('content2', icons2);
