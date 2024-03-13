@@ -69,6 +69,7 @@ tambahkanIkonDataKeContent('content1', icons1);
 var icons2 = [
   { name: '8-Bit Emblem', path: '../icon/8bitemblem.webp', attrib: '+10 Attack Damage', resep: 'B.F. Sword + Chain Vest' },
   { name: 'Adaptive Helm', path: '../icon/adaptive-helm.png', attrib: '+10 Attack Damage', resep: 'B.F. Sword + Negatron Cloak' },
+  { name: 'Redemption',   path: '../icon/redemption.webp', attrib: '+15 Mana' }
   // Tambahkan ikon-ikon baru di sini
 ];
 
